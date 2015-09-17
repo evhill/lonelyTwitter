@@ -27,6 +27,19 @@ public class LonelyTwitterActivity extends Activity {
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		//Polymorphism - classes can be instances of their supers
+		Tweet importantTweet = new ImportantTweet(" ");
+
+		//can include all kinds of tweets that are subclasses of Tweet. ie happy, sad, important
+		//normal
+		ArrayList<Tweet> listOfTweets = new ArrayList<Tweet>();
+
+		//Be careful though because if you add anything to sub classes
+		//and say it is an instance of a super you can't use them
+		//Ex: this will produce an error
+
+		//importantTweet.isImportantTweet();
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
